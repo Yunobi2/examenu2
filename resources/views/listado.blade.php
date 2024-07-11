@@ -6,7 +6,7 @@
     <ul>
         @foreach($alumnos as $alumno)
             <li>
-                <a href="{{ route('alumno.detalle', $alumno->id) }}">ALUMNO {{ $loop->iteration }}</a>
+                <a href="{{ route('alumno.detalle', $alumno->id) }}">{{ $alumno->nombre }}</a>
             </li>
         @endforeach
     </ul>
