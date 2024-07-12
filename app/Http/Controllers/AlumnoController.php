@@ -18,12 +18,17 @@ class AlumnoController extends Controller
         return view('ingreso');
     }
 
+    // public function guardar(AlumnoRequest $request)
+    // {
+    //     Alumno::create($request->validated());
+    //     return redirect()->route('listado')->with('success', 'Alumno guardado exitosamente');
+    // }
+
     public function guardar(AlumnoRequest $request)
     {
-        Alumno::create($request->validated());
+        Alumno::create($request->all());
         return redirect()->route('listado')->with('success', 'Alumno guardado exitosamente');
     }
-
 
     public function listado()
     {

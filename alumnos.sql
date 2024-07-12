@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-07-2024 a las 01:20:15
+-- Tiempo de generación: 12-07-2024 a las 02:25:19
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -33,6 +33,9 @@ CREATE TABLE `alumnos` (
   `curso` varchar(255) NOT NULL,
   `nota1` decimal(5,2) NOT NULL,
   `nota2` decimal(5,2) NOT NULL,
+  `promedio` decimal(5,2) NOT NULL,
+  `condicion` varchar(255) NOT NULL,
+  `fecha_reg` date NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -41,12 +44,12 @@ CREATE TABLE `alumnos` (
 -- Volcado de datos para la tabla `alumnos`
 --
 
-INSERT INTO `alumnos` (`id`, `nombre`, `curso`, `nota1`, `nota2`, `created_at`, `updated_at`) VALUES
-(1, 'Alumno 1', 'Laravel', 15.00, 16.00, '2024-07-11 18:18:44', '2024-07-11 18:18:44'),
-(2, 'Juan', 'Base de datos', 14.00, 17.00, '2024-07-11 18:23:41', '2024-07-11 18:23:41'),
-(3, 'Luis', 'Software', 12.00, 18.00, '2024-07-11 18:33:54', '2024-07-11 18:33:54'),
-(4, 'Luis Angel', 'IHC', 10.00, 9.00, '2024-07-11 19:22:59', '2024-07-11 19:22:59'),
-(5, 'Carlos', 'IA', 8.00, 12.00, '2024-07-11 19:42:06', '2024-07-11 19:42:06');
+INSERT INTO `alumnos` (`id`, `nombre`, `curso`, `nota1`, `nota2`, `promedio`, `condicion`, `fecha_reg`, `created_at`, `updated_at`) VALUES
+(1, 'Alumno 1', 'Laravel', 15.00, 16.00, 15.50, 'APROBADO', '2024-07-12', '2024-07-12 05:20:13', '2024-07-12 05:20:13'),
+(2, 'Juan', 'Base de datos', 14.00, 17.00, 15.50, 'APROBADO', '2024-07-12', '2024-07-12 05:21:05', '2024-07-12 05:21:05'),
+(3, 'Luis', 'Software', 12.00, 18.00, 15.00, 'APROBADO', '2024-07-12', '2024-07-12 05:21:38', '2024-07-12 05:21:38'),
+(4, 'Luis Angel', 'IHC', 10.00, 9.00, 9.50, 'DESAPROBADO', '2024-07-12', '2024-07-12 05:22:03', '2024-07-12 05:22:03'),
+(5, 'Carlos', 'IA', 8.00, 12.00, 10.00, 'DESAPROBADO', '2024-07-12', '2024-07-12 05:23:09', '2024-07-12 05:23:09');
 
 --
 -- Índices para tablas volcadas

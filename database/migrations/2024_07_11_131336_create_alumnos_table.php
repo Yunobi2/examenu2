@@ -17,6 +17,9 @@ return new class extends Migration
             $table->string('curso');
             $table->decimal('nota1', 5, 2);
             $table->decimal('nota2', 5, 2);
+            $table->decimal('promedio', 5, 2);
+            $table->string('condicion');
+            $table->date('fecha_reg');
             $table->timestamps();
         });
     }
